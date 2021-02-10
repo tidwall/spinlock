@@ -18,8 +18,10 @@ type Locker struct {
 // If the lock is already in use, the calling goroutine
 // blocks until the locker is available.
 func (l *Locker) Lock() {
-	for !atomic.CompareAndSwapUintptr(&l.lock, 0, 1) {
+loop:
+	if !atomic.CompareAndSwapUintptr(&l.lock, 0, 1) {
 		runtime.Gosched()
+		goto loop
 	}
 }
 
