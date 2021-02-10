@@ -1,4 +1,4 @@
-# `spinlock`
+# spinlock
 
 [![GoDoc](https://img.shields.io/badge/api-reference-blue.svg?style=flat-square)](https://godoc.org/github.com/tidwall/spinlock)
 
@@ -19,4 +19,4 @@ Josh Baker [@tidwall](http://twitter.com/tidwall)
 
 ## License
 
-SpinLock source code is available under the MIT [License](/LICENSE).
+spinlock source code is available under the MIT [License](/LICENSE).
